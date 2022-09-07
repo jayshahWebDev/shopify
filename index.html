@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopify Clone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              introBgColor: "#fbf7ed",
+              lightGreen: "#008060",
+              darkGreen: "#004c3f",
+              navFontColor: "#42474c",
+              navFontHoverColor: "#212326",
+              introHeadingColor: "#6b7177",
+              introSubHeadingColor: "42474c",
+              lighterGreen: "#f3fcf4",
+              darkerGreen: "#002e25",
+              gray: "#758283",
+            },
+            screens: {
+              tablet: "768px",
+              laptop: "1024px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="bg-introBgColor h-fit ">
+      <!-- NAVBAR SECTION -->
+      <nav
+        class="flex justify-between items-center mx-[20px] h-[50px] laptop:mx-[5%] laptop:pt-[45px]"
+      >
+        <img
+          class="h-[40px] mr-[2px] laptop:h-[60px]"
+          src="/assets/shopify-logo.png"
+          alt="logo"
+        />
+        <div
+          class="hidden laptop:flex laptop:flex-1 text-navFontHoverColor gap-x-[25px] text-[18px]"
+        >
+          <a href="" class="laptop:font-medium"
+            >Start <i class="fa-solid fa-angle-down"></i
+          ></a>
+          <a href="" class="laptop:font-medium"
+            >Sell <i class="fa-solid fa-angle-down"></i
+          ></a>
+          <a href="" class="laptop:font-medium"
+            >Market <i class="fa-solid fa-angle-down"></i
+          ></a>
+          <a href="" class="laptop:font-medium"
+            >Manage <i class="fa-solid fa-angle-down"></i
+          ></a>
+        </div>
+        <div class="flex justify-between items-center laptop:gap-x-[25px]">
+          <a
+            href=""
+            class="hidden laptop:flex text-[18px] laptop:text-navFontHoverColor laptop:font-medium"
+            >Pricing</a
+          >
+          <a
+            href=""
+            class="hidden laptop:flex text-[18px] laptop:text-navFontHoverColor laptop:items-center laptop:font-medium"
+            >Learn <i class="fa-solid fa-angle-down"></i
+          ></a>
+          <a
+            href=""
+            class="text-[18px] text-navFontHoverColor font-medium hover:text-navFontHoverColor"
+            >Log in</a
+          >
+          <a
+            href=""
+            class="hidden laptop:flex rounded-[5px] bg-lightGreen font-medium hover:bg-darkGreen hover:shadow-xl py-[10px] px-[20px] text-white"
+            >Try for free</a
+          >
+          <a href="" class="laptop:hidden"
+            ><i
+              class="fa fa-bars text-[18px] ml-[13px] text-navFontColor hover:text-navFontHoverColor"
+            ></i
+          ></a>
+        </div>
+      </nav>
+
+      <!-- INTRO SECTION -->
+      <div class="mt-[15%] laptop:flex laptop:mt-[3%]">
+        <div
+          class="mx-[20px] tablet:flex tablet:flex-col tablet:w-[60%] laptop:ml-[5%]"
+        >
+          <h1
+            class="text-[30px] font-bold text-darkGreen tablet:text-[35px] laptop:text-[50px] laptop:mt-[10%]"
+          >
+            The easiest way to sell <br />
+            online in India
+          </h1>
+          <p
+            class="text-[19px] mt-[25px] font-normal text-introHeadingColor laptop:w-[70%] laptop:my-[30px]"
+          >
+            Try one of the most powerful platforms on the market for free. No
+            technical knowledge needed.
+          </p>
+          <div
+            class="tablet:flex tablet:justify-center laptop:items-end tablet:items-end laptop:justify-start"
+          >
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              class="w-full tablet:w-[60%] p-3 mt-[20px] border-[1px] border-black rounded-[5px] focus:outline-none focus:border-darkGreen focus:border-[2px]"
+            />
+            <button
+              class="w-full text-white font-medium shadow-lg mt-[5px] p-3 tablet:ml-[10px] tablet:w-[40%] tablet:h-fit tablet:py-[13px] tablet:md-[30px] laptop:text-center laptop:h-fit laptop:py-[13px] laptop:w-[140px] rounded-[5px] bg-lightGreen hover:bg-darkGreen hover:shadow-xl"
+            >
+              Try for free
+            </button>
+          </div>
+          <p
+            class="text-[13px] mt-[15px] text-center tablet:text-left laptop:w-[75%] laptop:mt-[25px]"
+          >
+            Try Shopify free for 14 days, no credit card required. By entering
+            your email, you agree to receive marketing emails from Shopify.
+          </p>
+        </div>
+        <div class="relative flex justify-center laptopw-fit">
+          <img
+            src="/assets/introImg.jpg"
+            alt=""
+            class="h-[350px] mx-[20px] tablet:h-[600px]"
+          />
+          <div
+            class="absolute bottom-[0px] w-full bg-gradient-to-t from-black to-black opacity-25 h-[100px] tablet:h-[170px]"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPLORE SECTION -->
+    <div
+      class="bg-darkGreen h-fit py-[10%] laptop:py-[5%] tablet:px-[5%] laptop:px-[5%]"
+    >
+      <div class="mx-[20px]">
+        <div class="">
+          <h1 class="text-[30px] text-white">Bring your business online</h1>
+        </div>
+        <div class="laptop:flex laptop:justify-between">
+          <p class="text-[17px] text-white my-[15px]">
+            Create an ecommerce website backed by powerful tools that help you
+            find customers, drive sales, and manage your day-to-day.
+          </p>
+          <div class="flex justify-center w-fit items-center hover:gap-x-[5px]">
+            <a class="text-[17px] text-white mr-[5px] font-medium" href=""
+              >Explore more examples</a
+            >
+            <i
+              class="fa-solid fa-arrow-right text-[17px] text-white mt-[2px]"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mx-[20px] mt-[25px] grid grid-cols-2 gap-y-[40px] tablet:grid-cols-3 laptop:grid-cols-5 laptop:gap-x-[15px]"
+      >
+        <div class="tablet:w-fit">
+          <img
+            src="/assets/food-and-drink.jpg"
+            alt=""
+            class="h-[300px] tablet:h-[350px] mb-[10px] laptop:h-[500px]"
+          />
+          <a href="" class="text-white font-medium">FOOD & DRINK</a>
+          <p class="text-white font-normal">Blue Tokai</p>
+        </div>
+
+        <div class="tablet:w-fit">
+          <img
+            src="/assets/jewelry.jpg"
+            alt=""
+            class="h-[300px] tablet:h-[350px] mb-[10px] laptop:h-[500px]"
+          />
+          <a href="" class="text-white font-medium">JEWELRY</a>
+          <p class="text-white font-normal">Quirksmith</p>
+        </div>
+
+        <div class="tablet:w-fit">
+          <img
+            src="/assets/electronics.jpg"
+            alt=""
+            class="h-[300px] tablet:h-[350px] mb-[10px] laptop:h-[500px]"
+          />
+          <a href="" class="text-white font-medium">ELECTRONICS</a>
+          <p class="text-white font-normal">Crossbeats</p>
+        </div>
+
+        <div class="tablet:hidden laptop:grid">
+          <img
+            src="/assets/beauty.jpg"
+            alt=""
+            class="h-[300px] mb-[10px] laptop:h-[500px]"
+          />
+          <a href="" class="text-white font-medium">BEAUTY</a>
+          <p class="text-white font-normal">Mcaffeine</p>
+        </div>
+
+        <div class="hidden laptop:grid">
+          <img
+            src="/assets/fashion.jpg"
+            alt=""
+            class="h-[300px] mb-[10px] laptop:h-[500px]"
+          />
+          <a href="" class="text-white font-medium">FASHION</a>
+          <p class="text-white font-normal">Bunaai</p>
+        </div>
+      </div>
+
+      <h1
+        class="mx-[20px] tablet:mx-0 text-white text-[25px] mt-[20%] laptop:mt-[6%]"
+      >
+        Take the best path forward
+      </h1>
+      <div
+        class="mx-[20px] mt-[20px] tablet:mx-0 grid grid-cols-1 gap-y-[35px] laptop:grid-cols-4 tablet:grid-cols-2 tablet:gap-x-[20px]"
+      >
+        <div>
+          <img src="/assets/drag-drop.svg" alt="" class="h-[40px]" />
+          <h3 class="text-white mt-[15px] font-medium">
+            Start an online business
+          </h3>
+          <p class="text-white font-normal mt-[10px]">
+            Create a business, whether you’ve got a fresh idea or are looking
+            for a new way to make money.
+          </p>
+        </div>
+
+        <div>
+          <img src="/assets/shop.svg" alt="" class="h-[40px]" />
+          <h3 class="text-white mt-[15px] font-medium">
+            Move your business online
+          </h3>
+          <p class="text-white font-normal mt-[10px]">
+            Turn your retail store into an online store and keep serving
+            customers without missing a beat.
+          </p>
+        </div>
+
+        <div>
+          <img src="/assets/indentory.svg" alt="" class="h-[40px]" />
+          <h3 class="text-white mt-[15px] font-medium">Switch to Shopify</h3>
+          <p class="text-white font-normal mt-[10px]">
+            Bring your business to Shopify, no matter which ecommerce platform
+            you’re currently using.
+          </p>
+        </div>
+
+        <div>
+          <img src="/assets/group.svg" alt="" class="h-[40px]" />
+          <h3 class="text-white mt-[15px] font-medium">
+            Hire a Shopify expert
+          </h3>
+          <p class="text-white font-normal mt-[10px]">
+            Get set up with the help of a trusted freelancer or agency from the
+            Shopify Experts Marketplace.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURES SECTION -->
+    <div class="mx-[20px] my-[20%] laptop:my-[5%]">
+      <div class="flex flex-col justify-center items-center">
+        <h1 class="text-[26px] laptop:text-[40px]">
+          With you wherever you’re going
+        </h1>
+        <p
+          class="text-center text-navFontColor text-[19px] mt-[15px] laptop:w-[40%] tablet:w-[80%]"
+        >
+          One platform with all the ecommerce and point of sale features you
+          need to start, run, and grow your business.
+        </p>
+      </div>
+      <div
+        class="mt-[20%] tablet:mx-[5%] flex flex-col laptop:flex-row-reverse justify-between laptop:mt-[3%]"
+      >
+        <div class="laptop:w-1/2">
+          <h1 class="text-[23px] laptop:mt-[25%] laptop:text-[30px]">
+            Sell everywhere
+          </h1>
+          <p class="my-[20px] text-navFontColor tablet:w-[85%] laptop:w-[70%]">
+            Use one platform to sell products to anyone, anywhere—in person with
+            Point of Sale and online through your website, social media, and
+            online marketplaces.
+          </p>
+          <div class="flex justify-center w-fit items-center hover:gap-x-[5px]">
+            <a class="text-[17px] text-lightGreen mr-[5px] font-medium" href=""
+              >Explore ways to sell</a
+            >
+            <i
+              class="fa-solid fa-arrow-right text-[17px] text-lightGreen mt-[2px]"
+            ></i>
+          </div>
+        </div>
+        <div class="mt-[20px] laptop:w-1/2">
+          <video autoplay loop class="laptop:h-[500px]">
+            <source src="/assets/platform.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div
+        class="mt-[20%] laptop:mt-[5%] tablet:mx-[5%] flex flex-col laptop:flex-row justify-between"
+      >
+        <div class="laptop:w-1/2 laptop:mt-[15%]">
+          <h1 class="text-[23px] laptop:text-[30px] laptop:ml-[30%]">
+            Market your business
+          </h1>
+          <p
+            class="my-[20px] text-navFontColor tablet:w-[85%] laptop:ml-[30%] laptop:w-[70%]"
+          >
+            Take the guesswork out of marketing with built-in tools that help
+            you create, execute, and analyze digital marketing campaigns.
+          </p>
+          <div
+            class="flex justify-center w-fit laptop:ml-[30%] items-center hover:gap-x-[5px]"
+          >
+            <a class="text-[17px] text-lightGreen mr-[5px] font-medium" href=""
+              >Explore how to market your business</a
+            >
+            <i
+              class="fa-solid fa-arrow-right text-[17px] text-lightGreen mt-[2px]"
+            ></i>
+          </div>
+        </div>
+        <div class="mt-[20px] laptop:w-1/2">
+          <img
+            src="/assets/market-small-084eab2d72b510555838c446501d27dd7380585450efcaaa97453289b2b69c79.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        class="mt-[20%] laptop:mt-[5%] tablet:mx-[5%] flex flex-col justify-between laptop:flex laptop:flex-row-reverse"
+      >
+        <div class="laptop:w-1/2 laptop:ml-[5%]">
+          <h1 class="text-[23px] laptop:text-[30px] laptop:mt-[20%]">
+            Manage everything
+          </h1>
+          <p class="my-[20px] laptop:w-[60%] text-navFontColor tablet:w-[85%]">
+            Gain the insights you need to grow—use a single dashboard to manage
+            orders, shipping, and payments anywhere you go.
+          </p>
+          <div class="flex justify-center w-fit items-center hover:gap-x-[5px]">
+            <a class="text-[17px] text-lightGreen mr-[5px] font-medium" href=""
+              >Explore how to manage your business</a
+            >
+            <i
+              class="fa-solid fa-arrow-right text-[17px] text-lightGreen mt-[2px]"
+            ></i>
+          </div>
+        </div>
+        <div class="mt-[20px] laptop:w-1/2">
+          <img src="/assets/manage-small.png" class="shadow-xl" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPLORE IN INDIA SECTION -->
+    <div class="h-fit bg-lighterGreen py-[40px] laptop:px-[5%]">
+      <h1 class="text-[28px] mx-[20px] text-darkGreen tablet:w-[50%]">
+        Explore more from Shopify in India
+      </h1>
+      <div
+        class="bg-white mx-[20px] mt-[25px] tablet:flex tablet:flex-row-reverse"
+      >
+        <div
+          class="bg-center h-[350px] tablet:w-1/2"
+          style="
+            background-image: url(/assets/india-experts-small-432c16e7cd8ec09f3ae3aca42c58775001d5dc511e70608476ed7ee0e2d2e2c5.jpg);
+          "
+        ></div>
+        <div
+          class="mx-[20px] py-[30px] tablet:w-1/2 tablet:px-[5%] laptop:flex laptop:flex-col laptop:justify-between"
+        >
+          <h2 class="text-[15px] font-bold">START</h2>
+          <h1 class="text-[20px] my-[15px] laptop:text-[30px]">
+            Launch your store with the help of a Shopify Expert
+          </h1>
+          <p class="text-[15px] mb-[15px]">
+            Find hundreds of experts from India ready to help you get your store
+            up and running, from choosing a theme to building a fully customized
+            site.
+          </p>
+          <div class="flex justify-center w-fit items-center hover:gap-x-[5px]">
+            <a class="text-[17px] text-darkGreen mr-[5px] font-medium" href=""
+              >Browse Expert in India</a
+            >
+            <i
+              class="fa-solid fa-arrow-right text-[17px] text-darkGreen mt-[2px]"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ALICIA SECTION -->
+    <div class="mx-[20px] mt-[25px] laptop:mx-[5%]">
+      <div class="bg-darkerGreen tablet:flex">
+        <div
+          class="bg-center bg-no-repeat bg-cover h-[350px] tablet:h-[550px] tablet:w-1/2"
+          style="background-image: url(/assets/alicia.jpg)"
+        ></div>
+        <div
+          class="flex flex-col tablet:w-1/2 justify-center items-center mx-[20px] py-[20px] tablet:px-[5%]"
+        >
+          <h1
+            class="text-white font-medium text-[20px] laptop:text-[25px] tablet:text-center laptop:w-[70%]"
+          >
+            “Shopify was my knight in shining armor when I exhausted every other
+            possibility of getting my online store up and running. It was
+            stunningly easy to use, with more features and plug-ins that I
+            didn’t even know I wanted.”
+          </h1>
+          <img
+            class="my-[20px]"
+            src="/assets/logo-alicia-souza-small-4ac1bd956b9bf4d8fd78b6597f24ba9379714861042d3a199065b704a11657e6.png"
+            alt=""
+          />
+          <p class="text-white text-[20px] font-medium">
+            Alicia | Alicia Souza
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="mx-[20px] my-[20px] flex flex-wrap justify-around gap-y-[25px] tablet:gap-x-[30px] tablet:my-[50px]"
+    >
+      <img src="/assets/bajaao.png" alt="" />
+      <img src="/assets/john-jacobs.png" alt="" />
+      <img src="/assets/kylie.png" alt="" />
+      <img src="/assets//nush.png" alt="" />
+      <img src="/assets/yoga-bar.png" alt="" />
+      <img src="/assets/star-struck.png" alt="" />
+      <img src="/assets//m-caffeine.png" alt="" />
+    </div>
+
+    <!-- HELP SECTION -->
+    <div class="bg-introBgColor pt-[20px] tablet:p-0 tablet:flex">
+      <div class="mx-[20px] tablet:w-8/12 tablet:mx-[3%] laptop:w-1/2">
+        <h1 class="text-[30px] tablet:w-[70%] laptop:mt-[7%]">
+          Get the help you need, every step of the way
+        </h1>
+
+        <div
+          class="my-[20px] grid grid-cols-1 tablet:grid-cols-2 gap-y-[30px] tablet:gap-x-[10px]"
+        >
+          <div>
+            <h2 class="text-[16px] font-medium">Shopify support</h2>
+            <p class="text-[17px] my-[15px] text-navFontColor">
+              Contact support 24/7, whether you’re troubleshooting issues or
+              looking for business advice.
+            </p>
+            <div
+              class="flex justify-center w-fit items-center hover:gap-x-[5px]"
+            >
+              <a class="text-[17px] text-darkGreen mr-[5px] font-medium" href=""
+                >Contact support</a
+              >
+              <i
+                class="fa-solid fa-arrow-right text-[17px] text-darkGreen mt-[2px]"
+              ></i>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-[16px] font-medium">Shopify App Store</h2>
+            <p class="text-[17px] my-[15px] text-navFontColor">
+              Add features and functionality to your business with 6,000+ apps
+              that integrate directly with Shopify.
+            </p>
+            <div
+              class="flex justify-center w-fit items-center hover:gap-x-[5px]"
+            >
+              <a class="text-[17px] text-darkGreen mr-[5px] font-medium" href=""
+                >Visit the Shopify App Store</a
+              >
+              <i
+                class="fa-solid fa-arrow-right text-[17px] text-darkGreen mt-[2px]"
+              ></i>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-[16px] font-medium">Shopify Experts Marketplace</h2>
+            <p class="text-[17px] my-[15px] text-navFontColor">
+              Hire a Shopify expert to help you with everything from store setup
+              to SEO.
+            </p>
+            <div
+              class="flex justify-center w-fit items-center hover:gap-x-[5px]"
+            >
+              <a class="text-[17px] text-darkGreen mr-[5px] font-medium" href=""
+                >Explore the Shopify Expert Marketplace</a
+              >
+              <i
+                class="fa-solid fa-arrow-right text-[17px] text-darkGreen mt-[2px]"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tablet:w-4/12 laptop:w-1/2 h-[350px] tablet:h-[550px] bg-center bg-cover"
+        style="background-image: url(/assets/help.webp)"
+      ></div>
+    </div>
+
+    <!-- START FREE TRIAL SECTION -->
+    <div>
+      <div
+        class="mx-[20px] flex flex-col justify-center items-center mt-[100px] tablet:mb-[35px]"
+      >
+        <h1 class="text-[25px] text-center">
+          Start your business journey with Shopify
+        </h1>
+        <p class="mt-[30px] text-center">
+          Try Shopify for free, and explore all the tools and services you need
+          to start, run, and grow your business.
+        </p>
+        <button
+          class="text-white font-medium shadow-lg mt-[25px] px-[20px] py-[10px] rounded-[5px] bg-lightGreen hover:bg-darkGreen hover:shadow-xl"
+        >
+          Start free trial
+        </button>
+        <div
+          class="flex justify-center w-fit items-center tablet:hidden mt-[60px] mb-[35px]"
+        >
+          <a class="text-[18px] text-darkGreen mr-[5px] font-medium" href=""
+            >Back to top</a
+          >
+          <i
+            class="fa-solid fa-arrow-up text-[18px] text-darkGreen mt-[2px]"
+          ></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <div class="bg-darkerGreen flex">
+      <div class="w-full mx-[30px] mt-[30px] tablet:mx-[6%]">
+        <div
+          class="text-[16px] font-medium text-white flex flex-wrap gap-x-[25px] gap-y-[15px] justify-center tablet:justify-start"
+        >
+          <a href="">About</a>
+          <a href="">Careers</a>
+          <a href="">Press and Media</a>
+          <a href="">Shopify Plus</a>
+          <a href="">Sitemap</a>
+        </div>
+        <div class="flex justify-between mt-[30px] text-white">
+          <div class="tablet:w-1/2">
+            <h2 class="font-bold text-[15px] mb-[7px] laptop:ml-[5%]">
+              ONLINE STORE
+            </h2>
+            <div
+              class="flex laptop:ml-[5%] flex-col gap-y-[3px] font-medium text-[15px] text-gray tablet:flex-wrap tablet:h-[50%] laptop:h-[40%] tablet:gap-x-[20px]"
+            >
+              <a href="">Sell online</a>
+              <a href="">Features</a>
+              <a href="">Examples</a>
+              <a href="">Website builder</a>
+              <a href="">Online retail</a>
+              <a href="">Ecommerce website</a>
+              <a href="">Domain names</a>
+              <a href="">Themes</a>
+              <a href="">Shopping cart</a>
+              <a href="">Ecommerce hosting</a>
+              <a href="">Mobile commerce</a>
+              <a href="">Ecommerce software</a>
+              <a href="">Online store builder</a>
+              <a href="">Dropshipping Business</a>
+              <a href="">Store themes</a>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-y-[20px] tablet:w-1/2 tablet:flex-row laptop:justify-around tablet:gap-x-[20px]"
+          >
+            <div>
+              <h2 class="font-bold text-[15px] mb-[7px]">POINT OF SALE</h2>
+              <div
+                class="flex flex-col gap-y-[7px] font-medium text-[15px] text-gray"
+              >
+                <a href="">Point of sale</a>
+                <a href="">Features</a>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="font-bold text-[15px] mb-[7px]">SUPPORT</h2>
+              <div
+                class="flex flex-col gap-y-[7px] font-medium text-[15px] text-gray"
+              >
+                <a href="">24/7 support</a>
+                <a href="">Shopify Help Center</a>
+                <a href="">Shopify Community</a>
+                <a href="">API documentation</a>
+                <a href="">Free tools</a>
+                <a href="">Free stock photos</a>
+                <a href="">Websites for sale</a>
+                <a href="">Logo Maker</a>
+                <a href="">Business name generator</a>
+                <a href="">Research</a>
+                <a href="">Legal</a>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="font-bold text-[15px] mb-[7px]">SHOPIFY</h2>
+              <div
+                class="flex flex-col gap-y-[7px] font-medium text-[15px] text-gray"
+              >
+                <a href="">Contact</a>
+                <a href="">Partner program</a>
+                <a href="">Affiliate program</a>
+                <a href="">App developers</a>
+                <a href="">Investors</a>
+                <a href="">Blog topics</a>
+                <a href="">Community Events</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="bg-darkerGreen flex flex-col items-center py-[7%] laptop:py-[2%] gap-y-[10px] tablet:flex-row tablet:justify-between tablet:py-[7%]"
+    >
+      <div
+        class="flex flex-row gap-x-[20px] text-white tablet:mx-[6%] laptop:text-[20px]"
+      >
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-pinterest"></i>
+      </div>
+      <div
+        class="flex flex-row gap-x-[20px] text-gray font-medium text-[15px] tablet:mx-[6%]"
+      >
+        <p>Terms of service</p>
+        <p>Privacy policy</p>
+      </div>
+    </div>
+  </body>
+</html>
