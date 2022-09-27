@@ -1,6 +1,6 @@
 # Hey, there everyone `Jay Shah` here
 
-## [Live Project Demo](https://shopify-clone-green.vercel.app/)
+## [Live Project Demo](https://shopifyy-tailwind.netlify.app/)
 
 <br>
 
